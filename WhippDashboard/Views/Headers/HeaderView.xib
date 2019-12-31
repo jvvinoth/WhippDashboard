@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cfr-uk-IDe" customClass="HeaderView" customModule="Whip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GiT-Va-jof">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-dI-oJF">
+                            <rect key="frame" x="16" y="22" width="33" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vv8-v7-ebV">
+                            <rect key="frame" x="16" y="43" width="33" height="16"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Vv8-v7-ebV" firstAttribute="top" secondItem="sQ6-dI-oJF" secondAttribute="bottom" constant="3" id="0hv-Fy-S9Q"/>
+                        <constraint firstItem="Vv8-v7-ebV" firstAttribute="leading" secondItem="sQ6-dI-oJF" secondAttribute="leading" id="LQU-Ho-iKz"/>
+                        <constraint firstAttribute="bottom" secondItem="Vv8-v7-ebV" secondAttribute="bottom" constant="8" id="Xkz-Rt-MbV"/>
+                        <constraint firstItem="sQ6-dI-oJF" firstAttribute="leading" secondItem="GiT-Va-jof" secondAttribute="leading" constant="16" id="YNN-Wx-Ud2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="I37-cD-n44" firstAttribute="trailing" secondItem="GiT-Va-jof" secondAttribute="trailing" id="8ZV-oP-R3t"/>
+                <constraint firstItem="GiT-Va-jof" firstAttribute="top" secondItem="cfr-uk-IDe" secondAttribute="top" id="CAb-kw-ceX"/>
+                <constraint firstItem="GiT-Va-jof" firstAttribute="leading" secondItem="I37-cD-n44" secondAttribute="leading" id="JSE-gu-kDg"/>
+                <constraint firstItem="I37-cD-n44" firstAttribute="bottom" secondItem="GiT-Va-jof" secondAttribute="bottom" id="LKx-ZL-lS3"/>
+            </constraints>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="I37-cD-n44"/>
+            <connections>
+                <outlet property="decscriptionlabel" destination="Vv8-v7-ebV" id="7AJ-si-s35"/>
+                <outlet property="titleLabel" destination="sQ6-dI-oJF" id="JF2-MZ-JBW"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-90.066964285714278"/>
+        </view>
+    </objects>
+</document>

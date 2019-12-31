@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="42V-6L-mVz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="d8k-zZ-Huz">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="42V-6L-mVz" customClass="DashboardViewController" customModule="WhippDashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qnb-1z-Y39">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vdB-hO-h5o">
+                                <rect key="frame" x="316" y="52" width="90" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHK-5Z-Elj">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feM-c5-wsa">
+                                        <rect key="frame" x="40" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="a4v-Fw-QzK"/>
+                                            <constraint firstAttribute="width" constant="50" id="t8Y-Vv-S3B"/>
+                                        </constraints>
+                                        <state key="normal" image="filterIcon"/>
+                                        <connections>
+                                            <action selector="filterAction:" destination="42V-6L-mVz" eventType="touchUpInside" id="kn9-ve-19w"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="roX-yB-Xbg">
+                                <rect key="frame" x="0.0" y="102" width="414" height="760"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="42V-6L-mVz" id="1on-sT-jGQ"/>
+                                    <outlet property="delegate" destination="42V-6L-mVz" id="YO5-gP-hcR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="p9o-uQ-TgW" firstAttribute="trailing" secondItem="vdB-hO-h5o" secondAttribute="trailing" constant="8" id="8cH-oO-UXZ"/>
+                            <constraint firstItem="p9o-uQ-TgW" firstAttribute="bottom" secondItem="roX-yB-Xbg" secondAttribute="bottom" id="ZSN-SK-IIl"/>
+                            <constraint firstItem="p9o-uQ-TgW" firstAttribute="trailing" secondItem="roX-yB-Xbg" secondAttribute="trailing" id="ZSy-YG-i2o"/>
+                            <constraint firstItem="roX-yB-Xbg" firstAttribute="top" secondItem="vdB-hO-h5o" secondAttribute="bottom" id="jtK-o4-VLE"/>
+                            <constraint firstItem="roX-yB-Xbg" firstAttribute="leading" secondItem="p9o-uQ-TgW" secondAttribute="leading" id="p60-ZM-nFx"/>
+                            <constraint firstItem="vdB-hO-h5o" firstAttribute="top" secondItem="p9o-uQ-TgW" secondAttribute="top" constant="8" id="uPc-Z9-v2A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p9o-uQ-TgW"/>
+                    </view>
+                    <connections>
+                        <outlet property="appliedFilterLabel" destination="oHK-5Z-Elj" id="8Fo-eb-RVm"/>
+                        <outlet property="mockTable" destination="roX-yB-Xbg" id="pgT-gX-Gfs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbq-Zs-HjE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="filterIcon" width="22.5" height="22.5"/>
+    </resources>
+</document>
